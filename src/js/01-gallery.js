@@ -1,12 +1,20 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
-// Change code below this line
-import SimpleLightbox from "simplelightbox";
 
+
+// Change code below this line
+
+// Описаний в документації
+import SimpleLightbox from "simplelightbox";
+// Додатковий імпорт стилів
 import "simplelightbox/dist/simple-lightbox.min.css";
 
+
 console.log(galleryItems);
+
+
 const galleryList = document.querySelector(".gallery");
+
 
 const galleryListItem = galleryItems
     .map(
@@ -27,7 +35,7 @@ const galleryListItem = galleryItems
 galleryList.insertAdjacentHTML('beforeend', galleryListItem);
 
 const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: '250',
-    captionPosition: 'bottom'
+  cartionsType: "attr",
+  captionsData: 'alt',
+  captionDelay: 250,
 });
